@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+  /* box-shadow: 0 0 0 0.3rem rgba(85, 85, 85, 0.5); */
+  border-bottom: 1px solid rgb(185, 185, 185);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: serif;
+  font-size: 1.8rem;
+  color: #555;
+}
+
+input {
+  border: none;
+  background-color: inherit;
+  font-size: 1.8rem;
+  width: 100%;
+}
+
+.paper {
+  margin: 3.2rem auto;
+  min-height: 90vh;
+  height: auto;
+  width: 80%;
+  box-shadow: 0 0 2.4rem 1.2rem rgba(100, 100, 100, 0.05);
+  border-radius: 2%;
+}
+
+.container {
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ///////////////////////////////////////////// */
+/* HEADER SECTION */
+/* ///////////////////////////////////////////// */
+
+.section-header {
+  padding: 4.8rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.heading-primary {
+  font-size: 4.8rem;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  color: #333;
+}
+
+.heading-secondary {
+  font-size: 1.8rem;
+  letter-spacing: 4px;
+  text-transform: lowercase;
+}
+
+/* ///////////////////////////////////////////// */
+/* LIST SECTION */
+/* ///////////////////////////////////////////// */
+
+.section-list {
+  padding: 0 4.8rem 4.8rem 4.8rem;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  width: 60%;
+}
+
+.todos {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.icon-add {
+  transition: all 0.5s;
+}
+
+.icon-add:hover {
+  transform: scale(1.6);
+}
+
+.task-add {
+  padding: 1.2rem;
+  display: flex;
+  gap: 1.8rem;
+  align-items: center;
+  justify-content: center;
+  font-family: serif;
+  border-radius: 2%;
+}
+
+.todo {
+  padding: 1.2rem;
+  background-color: #eee;
+  border-radius: 2%;
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  justify-content: space-between;
+
+  transition: all 0.3s;
+}
+
+.todo:hover {
+  background-color: #ccc;
+}
+
+.todo-item {
+  display: flex;
+  gap: 1.8rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-tool {
+  display: flex;
+  gap: 1.8rem;
+  align-items: center;
+}
+
+.text-todo {
+  border: none;
+  border-bottom: 1px solid #555;
+  /* margin: 1.8rem 0; */
+}
+
+.icon-todo {
+  height: 1.8rem;
+  width: 1.8rem;
+  cursor: pointer;
+}
+
+.icon-del {
+  color: #c92a2a;
+}
+
+.todo-add {
+  font-family: inherit;
+}
+
+.todo-text--done {
+  text-decoration-line: line-through;
+}
+
+.icon-check {
+  cursor: pointer;
+}

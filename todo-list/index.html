@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="style.css" rel="stylesheet" />
+
+    <script defer src="script.js"></script>
+
+    <title>Todo List</title>
+  </head>
+  <body>
+    <div class="paper">
+      <header class="section-header container">
+        <h1 class="heading-primary">Just do it!</h1>
+        <h2 class="heading-secondary">
+          &mdash; Whatever is worth doing is worth doing well &mdash;
+        </h2>
+      </header>
+
+      <main>
+        <section class="section-list container">
+          <ul class="todos">
+            <li class="task-add" value="0">
+              <label for="todo-add">
+                <ion-icon
+                  class="icon-todo icon-add"
+                  name="add-outline"
+                ></ion-icon>
+              </label>
+              <input
+                id="todo-add"
+                type="text"
+                class="todo-add todo-input"
+                placeholder="Add new task"
+              />
+            </li>
+
+            <li class="todo" value="1">
+              <div class="todo-item">
+                <div class="todo-box">
+                  <ion-icon
+                    class="icon-todo icon-check"
+                    name="square-outline"
+                  ></ion-icon>
+                </div>
+                <label>
+                  <p class="todo-text">laundry</p>
+                </label>
+              </div>
+              <div class="todo-tool">
+                <div class="todo-edit">
+                  <ion-icon class="icon-todo" name="pencil-outline"></ion-icon>
+                </div>
+                <div class="todo-del">
+                  <ion-icon
+                    class="icon-todo icon-del"
+                    name="trash-outline"
+                  ></ion-icon>
+                </div>
+              </div>
+            </li>
+
+            <li class="todo" value="1">
+              <div class="todo-item">
+                <div class="todo-box">
+                  <ion-icon
+                    class="icon-todo icon-check"
+                    name="square-outline"
+                  ></ion-icon>
+                </div>
+                <label>
+                  <p class="todo-text">groceries</p>
+                </label>
+              </div>
+              <div class="todo-tool">
+                <div class="todo-edit">
+                  <ion-icon class="icon-todo" name="pencil-outline"></ion-icon>
+                </div>
+                <div class="todo-del">
+                  <ion-icon
+                    class="icon-todo icon-del"
+                    name="trash-outline"
+                  ></ion-icon>
+                </div>
+              </div>
+            </li>
+            <li class="todo todo-text--done" value="2">
+              <div class="todo-item">
+                <div class="todo-box">
+                  <ion-icon
+                    id="icon-check"
+                    class="icon-todo icon-check"
+                    name="checkmark-done-outline"
+                  ></ion-icon>
+                </div>
+                <label for="icon-check">
+                  <!-- <p class="todo-text">dentist @4pm</p> -->
+                  <p class="todo-text">dentist @4pm</p>
+                </label>
+              </div>
+              <div class="todo-tool">
+                <div class="todo-edit">
+                  <ion-icon class="icon-todo" name="pencil-outline"></ion-icon>
+                </div>
+                <div class="todo-del">
+                  <ion-icon
+                    class="icon-todo icon-del"
+                    name="trash-outline"
+                  ></ion-icon>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
