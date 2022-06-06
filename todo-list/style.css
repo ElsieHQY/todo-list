@@ -91,6 +91,10 @@ input {
   gap: 2.4rem;
 }
 
+.btn {
+  display: none;
+}
+
 .icon-add {
   transition: all 0.5s;
 }

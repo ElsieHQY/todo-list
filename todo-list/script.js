@@ -1,50 +1,68 @@
 "use strict";
 
 // console.log(`fix: (1) add new task bug (2) sort tasks (3) edit task content`);
-console.log(`fix: (2) sort tasks (3) edit task content`);
+console.log(`fix: (2) sort tasks (3) edit task content (4) one more new task`);
 
-const inputNewTask = document.querySelector("input");
+const inputNew = document.querySelector(".input-new");
 const listEl = document.querySelector("ul");
 
-inputNewTask.addEventListener("keypress", function (e) {
-  inputNewTask.textContent = "";
+inputNew.addEventListener("keypress", function (e) {
+  if (e.key === "Enter") {
+    if (!inputNew.value) return alert(`Please describe your task :)`);
 
-  if (e.key === "Enter" && !inputNewTask.textContent) {
-    return alert(`Please type in the task!`);
-  }
+    if (inputNew.value) {
+      const html = `
+            <li class="todo">
+                <div class="todo-item">
+                    <div class="todo-box">
+                        <ion-icon
+                            class="icon-todo icon-check"
+                            name="square-outline"
+                        ></ion-icon>
+                    </div>
+                    <label>
+                        <p class="todo-text">${inputNew.value}</p>
+                    </label>
+                </div>
+                <div class="todo-tool">
+                    <div class="todo-edit">
+                        <ion-icon class="icon-todo" name="pencil-outline"></ion-icon>
+                    </div>
+                    <div class="todo-del">
+                        <ion-icon
+                            class="icon-todo icon-del"
+                            name="trash-outline"
+                        ></ion-icon>
+                    </div>
+                </div>
+            </li>
+              `;
 
-  if (inputNewTask.textContent && e.key === "Enter") {
-    const html = `
-    <li class="todo" value="1">
-        <div class="todo-item">
-            <div class="todo-box">
-                <ion-icon
-                    class="icon-todo icon-check"
-                    name="square-outline"
-                ></ion-icon>
-            </div>
-            <label>
-                <p class="todo-text">${inputNewTask.textContent.slice(
-                  0,
-                  -5
-                )}</p>
-            </label>
-        </div>
-        <div class="todo-tool">
-            <div class="todo-edit">
-                <ion-icon class="icon-todo" name="pencil-outline"></ion-icon>
-            </div>
-            <div class="todo-del">
-                <ion-icon
-                    class="icon-todo icon-del"
-                    name="trash-outline"
-                ></ion-icon>
-            </div>
-        </div>
-    </li>
-      `;
-    listEl.innerHTML += html;
-    inputNewTask.textContent = "";
+      //   function addTodos() {
+      //     const inputValue = document.querySelector('.todo__input').value;
+
+      //    // 檢查輸入欄位是否為空值，trim() 可清除字串前後空白
+      //     if (inputValue.trim().length === 0) return;
+      //     // 新增 todo
+      //     const newTodo = document.createElement('li');
+      //     newTodo.classList.add('todo');
+      //     newTodo.innerHTML = `
+      //       <label class="todo__title">
+      //         <input class="todo__check" type="checkbox">
+      //         <p>${escapeHtml(inputValue)}</p>
+      //       </label>
+      //       <button class="btn-delete"></button>
+      //     `
+      //     document.querySelector('.todo__list').appendChild(newTodo);
+      //     // 新增成功後，清空輸入欄
+      //     document.querySelector('.todo__input').value = '';
+      //   }
+
+      const newTodo = document.createElement("li");
+      newTodo.innerHTML = html;
+      listEl.appendChild(newTodo);
+      inputNew.value = "";
+    }
   }
 });
 
@@ -54,17 +72,12 @@ taskCheck.forEach(function (check) {
     check.closest("li").classList.toggle("todo-text--done");
     if (check.name === "square-outline") {
       check.name = "checkmark-done-outline";
-      check.closest("li").value = "2";
     } else if (check.name === "checkmark-done-outline") {
       check.name = "square-outline";
-      check.closest("li").value = "1";
     }
   });
 });
 
-// ////////////////////////////////////////////////////
-// have NOT finished yet
-// ////////////////////////////////////////////////////
 const iconEditEl = document.querySelectorAll(".todo-edit");
 iconEditEl.forEach(function (edit) {
   edit.addEventListener("click", function () {
@@ -73,6 +86,15 @@ iconEditEl.forEach(function (edit) {
     const curTodoText = edit.closest(".todo").textContent.trim();
   });
 });
+
+// const para = document.querySelector('p');
+
+// para.addEventListener('click', updateName);
+
+// function updateName() {
+//   let name = prompt('輸入新的名字');
+//   para.textContent = 'Player 1: ' + name;
+// }
 
 const iconDelEl = document.querySelectorAll(".todo-del");
 iconDelEl.forEach(function (del) {
@@ -83,3 +105,5 @@ iconDelEl.forEach(function (del) {
     if (confirmMsg) curTodo.remove();
   });
 });
+
+const renderTask = function () {};
