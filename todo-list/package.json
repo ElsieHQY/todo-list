@@ -1,0 +1,16 @@
+{
+  "name": "todo-list",
+  "version": "1.0.0",
+  "description": "todolist",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel -p 8080 index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "elsie hsu",
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^2.6.0"
+  }
+}
