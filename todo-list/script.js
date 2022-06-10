@@ -38,26 +38,6 @@ inputNew.addEventListener("keypress", function (e) {
             </li>
               `;
 
-      //   function addTodos() {
-      //     const inputValue = document.querySelector('.todo__input').value;
-
-      //    // 檢查輸入欄位是否為空值，trim() 可清除字串前後空白
-      //     if (inputValue.trim().length === 0) return;
-      //     // 新增 todo
-      //     const newTodo = document.createElement('li');
-      //     newTodo.classList.add('todo');
-      //     newTodo.innerHTML = `
-      //       <label class="todo__title">
-      //         <input class="todo__check" type="checkbox">
-      //         <p>${escapeHtml(inputValue)}</p>
-      //       </label>
-      //       <button class="btn-delete"></button>
-      //     `
-      //     document.querySelector('.todo__list').appendChild(newTodo);
-      //     // 新增成功後，清空輸入欄
-      //     document.querySelector('.todo__input').value = '';
-      //   }
-
       const newTodo = document.createElement("li");
       newTodo.innerHTML = html;
       listEl.appendChild(newTodo);
@@ -107,8 +87,3 @@ iconDelEl.forEach(function (del) {
 });
 
 const renderTask = function () {};
-
-var length = 10;
-const fn = function () {
-  console.log(this.length);
-};
