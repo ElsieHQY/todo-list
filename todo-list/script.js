@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 
 // console.log(`fix: (1) add new task bug (2) sort tasks (3) edit task content`);
 console.log(`fix: (2) sort tasks (3) edit task content (4) one more new task`);
@@ -107,3 +107,8 @@ iconDelEl.forEach(function (del) {
 });
 
 const renderTask = function () {};
+
+var length = 10;
+const fn = function () {
+  console.log(this.length);
+};
